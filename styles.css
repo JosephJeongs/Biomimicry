@@ -1,0 +1,32 @@
+.box {
+    margin:5%;
+    background-color: lightgoldenrodyellow;
+    margin: auto;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+}
+
+.title{
+    color:palevioletred;
+    font-size: 50px;
+    text-align:center;  
+    width: 900px;
+    height: 60px;
+    position: relative;
+    top: 60px;
+}
+
+.backbutton{
+    color:palevioletred;
+    font-size: 30px;
+    background-color: lightgoldenrodyellow;
+    margin: auto;
+    text-align:center;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    width: 100px;
+    height:50px;
+    position:relative;
+}

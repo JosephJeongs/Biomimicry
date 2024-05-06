@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title> Biomimicry </title>
+        <link rel="stylesheet" href = "styles.css">
+        <style>
+           .content {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+                position: relative;
+                left: 25.7%;
+                top: 95px;
+                text-align: center;
+                }
+
+            .collapsible {
+                background-color: rgb(66, 120, 28);
+                color: white;
+                cursor: pointer;
+                padding: 18px;
+                border: none;
+                text-align: center;
+                outline: none;
+                font-size: 15px;
+                width: 50%;
+                position: relative;
+                display:block;
+                margin-left: auto;
+                margin-right: auto;
+                top: 100px;
+                border-radius: 10px;
+                }
+
+            .active, .collapsible:hover {
+                background-color: rgb(84, 153, 34);
+            }
+
+            #box{
+                background-color: lightgoldenrodyellow;
+                border: 2px solid #73AD21;
+                border-radius: 25px;
+                width:48.5%;
+            }
+            .nature {
+                position: relative;
+                top: 150px;
+                left: 25%;
+                text-align:center;
+                line-height:1.3;
+                padding: 10px;
+            }
+            .didyouknow {
+                position: relative;
+                left: 25%;
+                top: 200px;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+
+
+    <body style="background-color: rgb(223, 247, 191)">
+        <h1 class="box title"> Nature's Solution </h1>
+        <a href="index.html" class="backbutton"> Back </a>
+
+        <button class="collapsible"> Context (Why airplanes and what is the significance?) &#8628;</button>
+        <div class="content" id="box">
+            <p> Aircrafts–whether it be passenger, cargo, military–are a great feat in engineering
+                history, additionally inspired by biomimicry. With such a complex design and numerous technical 
+                components, there are almost always features that could be redesigned in order to be more efficient, 
+                such as in cost or energy usage.  </p>
+            <p> Visualize the last time that you may have sat in an airplane, specifically a seat near the roaring 
+                engines. Seconds after the plane touches down onto the runway, your ears are greeted with a rapidly 
+                increasing decibel (measurement of sound) level. That is the engines engaging in a mode referred to 
+                as “reverse thrust.” In this mode, the airflow from the front to the back of the engine is disrupted
+                and redirected to exit via the sides that open up. This forced airflow then begins to push air to the
+                sides of the engine, including towards the passengers.</p>
+            <p>So what? Depending on the speed of the touchdown and weight of the aircraft, the reverse thrust is only
+                engaged for tens of seconds, not too bad right? Well, the events that lead up to the engagement of reverse
+                thrusts goes back all the way to the preparation of the flight. </p>
+            <p>Every aircraft that has the intention to take flight must follow a fuel policy. This simply states that an 
+                aircraft should have enough fuel that by the time it arrives at its destination, it is left with almost no 
+                fuel. This is critical because of 2 factors of fuel: cost and weight. First, fuel is abundant in aircrafts,
+                 meaning that it costs thousands of dollars to operate the flight. Any cutdown on fuel is highly beneficial. 
+                 Second, fuel holds weight. Tens or hundreds of thousands of pounds of fuel can limit mobility. Additionally, 
+                 extra weight on aircrafts makes it more vulnerable for rougher landings, discomforting passengers and, more 
+                 importantly, reducing the life longevity of landing gear (wheels of the aircraft). </p>
+            <p>With all of this considered, eliminating the need for reverse thrusts can provide numerous valuable benefits. 
+                But what could be used as an alternative? </p>
+        </div>
+
+        <div id="box" class="nature">
+            <h1> My Design (From Nature) </h1>
+            <p> As previously mentioned, aircrafts, with such a complex design and numerous technical components, are sensitively
+                prone to improvements. In this case, fuel efficiency – and on a more specific scale, reverse thrusts. This is simply
+                redirecting the airflow to the sides of the engine in order to reduce aircraft speed at the expense of some fuel. On 
+                dry pavement, this contributes a minimal amount of stopping force. In order to eliminate this unnecessary fuel consumption, 
+                a possible proposition is a complete new design of the wings in order for it to create a barrier of surface area against
+                wind. Geese are behind this central idea. Unlike many birds that take flight, geese are particularly fascinating because
+                of how they land in a pond: spreading their wings, they rotate the wall of feathers in order to maximize drag for a slower 
+                approach and elegantly take their spots on the water. This “behavior” can be mimicked on planes, albeit less elegantly, 
+                with a few approaches. First, this new system can be implemented directly in the leading edge slat, a retractable component
+                on the front of wings, with two large panels that can extend in order to form a V-shape, hypothetically mimicking the drag 
+                effect on geese. Alternatively, the leading edge slat can be separated via a horizontal split in order for both components 
+                to independently alter their position to form the shape V formation (this mechanism will be referred to as V-force). </p>
+            <p> However, other methods of deceleration exist, such as parachutes – seen in drag cars and space shuttles. Although they may
+                be exceptional in their purpose, using this method is highly impractical for airplanes as one, there are many flights in a 
+                day, meaning a constant reset of the parachutes plus thorough maintenance, and two, cost. </p>    
+            <p> Inventions that come easily often overlook potential problems and this is no exception. V-force is not an implemented
+                mechanism in all aircrafts and if it proves to be effective, then all aircrafts will slowly have to be called back for 
+                modifications. Until then, fuel savings will not deem significant and will take a while to reach that potential. Additionally,
+                V-force will not provide an as effective method in braking during wet conditions to reverse thrusts. Luckily, most landings 
+                are in the general range of dry conditions and will not require support from reverse thrusts. </p>
+            <h3> Refer to the model on the table </h3>
+        </div>
+        <div id="box" class="didyouknow">
+            <h2><u>Did You Know?</u></h2>
+            <h4> In aviation, there is a common term coined "butter" to describe a smooth landing executed by pilots. Geese can also achieve a similar
+                butter landing, hence why this page is labeled "Geese can Grease."</h4>
+        </div>
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                }
+              });
+            }
+        </script>
+    </body>
+</html>

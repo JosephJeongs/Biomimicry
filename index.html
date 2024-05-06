@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title> Biomimicry </title>
+        <link rel="stylesheet" href = "styles.css">
+        <style>
+            .button{
+                background-color: rgb(199, 245, 193);
+                border: 2px solid rgb(145, 255, 222);
+                color:rgb(120, 106, 145);
+                text-align: center;
+                padding: 30px 64px;
+                font-size: 50px;
+                border-radius: 20px;
+                transition-duration: 0.3s;
+            }
+            .button:hover{
+                background-color: rgb(238, 234, 175);
+                color: black;
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+            .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+            .button:hover span {
+                padding-right: 25px;
+            }
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+            #position{
+                position: relative;
+                top: 200px;
+                margin: 5%
+            }
+            #position1{
+                position: relative;
+                top: 200px;
+                margin: 9%
+            }
+            #position2{
+                position:relative;
+                top:325px;
+                margin:5%;
+                left: 550px;
+            }
+        </style>
+    </head>
+
+    <body style="background-color: rgb(223, 247, 191)">
+        <h1 class="box title"> Joseph Jeong's Biomimicry Presentation </h1>
+        <a href="whatisbiomimicry.html" class="button" style="vertical-align:middle" id="position"><span> What is Biomimicry?</span></a>
+        <a href="mimicinovation.html" class="button" style="vertical-align:middle" id="position1"><span> Geese can Grease</span></a>
+        <a href="extra.html" class="button" style="vertical-align:middle" id="position2"<span> Extras</span></a>
+    </body>
+
+</html>
