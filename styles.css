@@ -9,6 +9,9 @@
 .title{
     color:palevioletred;
     font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
 .backbutton{
@@ -17,7 +20,8 @@
     background-color: lightgoldenrodyellow;
     display: flex;
     justify-content: center;
-    align-items: center;    border-radius: 25px;
+    align-items: center;   
+    border-radius: 25px;
     border: 2px solid #73AD21;
     padding: 20px;
     width: 100px;
